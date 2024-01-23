@@ -1,0 +1,1334 @@
+body {
+    margin: 0%;
+    background-color: white;
+}
+ 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 10px;
+    background-color: #1C1E57;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+ 
+.ford-logo {
+    margin-left: 20px;
+    width: 7%;
+}
+ 
+.mustang-logo {
+    width: 7%;
+    display: flex;
+    align-self: center;
+    margin-left: -50px;
+}
+ 
+.navbar-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: 70px;
+    margin-bottom: 10px;
+}
+ 
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+ 
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+ 
+.image-container img {
+    display: block;
+    position: relative;
+    top: 50px;
+    height: auto;
+    width: 100%;
+}
+ 
+.mustang-car {
+    position: relative;
+}
+ 
+/*This is for the linear gradient/ fade effect over the car*/
+.overlay { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255, 0), rgb(0, 0, 0, 100) 90%);
+}
+ 
+.information {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    color:white;
+    padding: 1px;
+    z-index: 999;
+}
+ 
+.navbar {
+    position: relative;
+    background-color: black;
+    z-index: 999;
+}
+ 
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+ 
+.nav-list li {
+    padding: 15px 20px;
+}
+ 
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+}
+ 
+/* for the scroll animation*/
+#zoomedImage {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-out, top 0.3s ease;
+}
+ 
+.zoomed {
+  transform: scale(10); /* Zoom factor */
+}
+ 
+/*About Ford Mustang information*/
+.about-ford {
+    background-color: rgb(0, 0, 0);
+    width: 55%;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+ 
+.about-ford h2 {
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 45px;
+    margin: 0;
+}
+ 
+.about-ford p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px 1px 10px;
+}
+ 
+/*Competitors Overview*/
+.competitors-overview {
+    background-color: rgb(0, 0, 0);
+    width: 55%;
+    overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+ 
+.competitors-overview h2 {
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 45px;
+    margin: 0;
+    font-size: 45px;
+}
+ 
+.overview-one {
+    font-size: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+    padding: 5px 10px 1px 10px;
+}
+ 
+.overview-two {
+    font-size: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+    padding: 1px 10px 5px 10px;
+}
+ 
+/*Mustang car models*/
+.mustang-models {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+    background-color: rgb(18, 100, 100);
+    padding: 20px;
+}
+ 
+.black {
+    width: 100%;
+    border-radius: 15px;
+}
+ 
+/*mustang types display*/
+.mustang-display {
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 100px;
+}
+ 
+/*1967 Ford Mustang*/
+.vintage {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+ 
+.vintage h2 {
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 45px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+ 
+.vintage p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+.vintage img {
+    width: 40%;
+    display: block;
+    align-self: center;
+    border-radius: 25px;
+    border: 5px solid #ffffff ;
+}
+ 
+.slideshow-container-vintage {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+ 
+.prev-vintage, .next-vintage {
+    position: absolute;
+    top: 68%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+}
+ 
+.prev-vintage {
+    left: 0;
+    margin-left: 26%;
+}
+ 
+.next-vintage {
+    right: 0;
+    margin-right: 26%;
+}
+ 
+.prev-vintage, .next-vintage {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/*2014 FOrd Mustang*/
+.new {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+ 
+.new p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+ 
+.new img {
+    width: 40%;
+    display: block;
+    align-self: center;
+    border-radius: 25px;
+}
+ 
+.slideshow-container-new {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+ 
+.prev-new, .next-new {
+    position: absolute;
+    top: 68%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+}
+ 
+.prev-new {
+    left: 0;
+    margin-left: 26%;
+}
+ 
+.next-new {
+    right: 0;
+    margin-right: 26%;
+}
+ 
+.prev-new, .next-new {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+ 
+/*2022 Ford Mustang*/
+.modern {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+ 
+.modern p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+ 
+.modern img {
+    width: 40%;
+    display: block;
+    align-self: center;
+    border-radius: 25px;
+    border: 5px solid #5c5c5c ;
+}
+ 
+.slideshow-container-modern {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+ 
+.prev-modern, .next-modern {
+    position: absolute;
+    top: 68%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+}
+ 
+.prev-modern {
+    left: 0;
+    margin-left: 26%;
+}
+ 
+.next-modern {
+    right: 0;
+    margin-right: 26%;
+}
+ 
+.prev-modern, .next-modern {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+ 
+/*2024 model*/
+.future {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+ 
+.future p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+ 
+.future img {
+    width: 40%;
+    display: block;
+    align-self: center;
+    border-radius: 25px;
+    border: 5px solid #ffffff ;
+}
+ 
+.slideshow-container-future {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+ 
+.prev-future, .next-future {
+    position: absolute;
+    top: 68%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+}
+ 
+.prev-future {
+    left: 0;
+    margin-left: 26%;
+}
+ 
+.next-future {
+    right: 0;
+    margin-right: 26%;
+}
+ 
+.prev-future, .next-future {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+ 
+/*Founder*/
+.owner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+ 
+.owner {
+    flex: 1;
+    background-color: rgb(0, 0, 0);
+    width: 55%;
+    overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+}
+ 
+.owner h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    margin: 0;
+}
+ 
+.founder {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+    padding: 5px 10px 1px 10px;
+    font-size: 20px;
+}
+ 
+.founder-image {
+    margin-left: 20px;
+}
+ 
+.founder-image img {
+    width: 55%;
+    height: auto;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    border: 5px solid #ffffff ;
+}
+ 
+/*Slide Show container & next/ previous button*/
+.slideshow-container-vintage {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+ 
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+ 
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+ 
+/*media queries*/
+ 
+/*Iphone 4 (320px - 480px)*/
+@media screen and (min-width: 320px) and (max-width: 320px) {
+    .ford-logo {
+        width: 20%;
+        margin-left: 5px;
+    }
+ 
+    .mustang-logo {
+        width: 20%;
+    }
+ 
+    .navbar-icon {
+        margin-right: 7%;
+    }
+ 
+    .about-ford {  /*about ford*/
+        width: 87%;
+        margin-bottom: 25px;
+    }
+ 
+    .about-ford h2 {
+        font-size: 20px;
+    }
+ 
+    .about-ford p {
+        font-size: 12px;
+    }
+ 
+    .competitors-overview {  /*Competitors overview*/
+        width: 87%;
+        margin-bottom: 40px;
+    }
+ 
+    .competitors-overview h2 { 
+        font-size: 20px;
+    }
+ 
+    .overview-one {
+        font-size: 12px;
+    }
+ 
+    .overview-two {
+        font-size: 12px;
+    }
+ 
+    .mustang-display {
+        margin-bottom: 70px;
+    }
+ 
+    .slideshow-container-vintage {  /*1967 models*/
+        margin-bottom: 25px;
+    }
+ 
+    .vintage h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .vintage p {
+        font-size: 20px;
+    }
+ 
+    .vintage img {
+        width: 57%;
+    }
+ 
+    .prev-vintage {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-vintage {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .slideshow-container-new {  /*2014 models*/
+        margin-bottom: 25px;
+    }
+ 
+    .new h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .new p {
+        font-size: 20px;
+    }
+ 
+    .new img {
+        width: 57%;
+    }
+ 
+    .slideshow-container-modern {  /*2022 models*/
+        margin-bottom: 25px;
+    }  
+ 
+    .modern h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .modern p {
+        font-size: 20px;
+    }
+ 
+    .modern img {
+        width: 57%;
+    }
+ 
+    .prev-modern {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-modern {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .slideshow-container-future {  /*2024 models*/
+        margin-bottom: 25px;
+    }  
+ 
+    .future h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .future p {
+        font-size: 20px;
+    }
+ 
+    .future img {
+        width: 57%;
+    }
+ 
+    .prev-future {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-future {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .owner {  /*Founder section*/
+        width: 87%;
+    }
+ 
+    .owner h2 {
+        font-size: 20px;
+    }
+ 
+    .owner p {
+        font-size: 12px;
+    }
+ 
+    .founder-image img {
+        width: 70%;
+    }
+}
+ 
+/*iPhone X (375px - 812px)*/
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .ford-logo {
+        width: 19%;
+        margin-left: 5px;
+    }
+ 
+    .mustang-logo {
+        width: 19%;
+    }
+ 
+    .navbar-icon {
+        margin-right: 7%;
+    }
+ 
+    .about-ford {  /*about ford*/
+        width: 87%;
+        margin-bottom: 25px;
+    }
+ 
+    .about-ford h2 {
+        font-size: 20px;
+    }
+ 
+    .about-ford p {
+        font-size: 12px;
+    }
+ 
+    .competitors-overview {  /*Competitors overview*/
+        width: 87%;
+        margin-bottom: 40px;
+    }
+ 
+    .competitors-overview h2 { 
+        font-size: 20px;
+    }
+ 
+    .overview-one {
+        font-size: 12px;
+    }
+ 
+    .overview-two {
+        font-size: 12px;
+    }
+ 
+    .mustang-display {
+        margin-bottom: 70px;
+    }
+ 
+    .slideshow-container-vintage {  /*1967 models*/
+        margin-bottom: 25px;
+    }
+ 
+    .vintage h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .vintage p {
+        font-size: 20px;
+    }
+ 
+    .vintage img {
+        width: 57%;
+    }
+ 
+    .prev-vintage {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-vintage {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .slideshow-container-new {  /*2014 models*/
+        margin-bottom: 25px;
+    }
+ 
+    .new h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .new p {
+        font-size: 20px;
+    }
+ 
+    .new img {
+        width: 57%;
+    }
+ 
+    .slideshow-container-modern {  /*2022 models*/
+        margin-bottom: 25px;
+    }  
+ 
+    .modern h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .modern p {
+        font-size: 20px;
+    }
+ 
+    .modern img {
+        width: 57%;
+    }
+ 
+    .prev-modern {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-modern {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .slideshow-container-future {  /*2024 models*/
+        margin-bottom: 25px;
+    }  
+ 
+    .future h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .future p {
+        font-size: 20px;
+    }
+ 
+    .future img {
+        width: 57%;
+    }
+ 
+    .prev-future {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-future {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .owner {  /*Founder section*/
+        width: 87%;
+    }
+ 
+    .owner h2 {
+        font-size: 20px;
+    }
+ 
+    .owner p {
+        font-size: 12px;
+    }
+ 
+    .founder-image img {
+        width: 70%;
+    }
+}
+ 
+/*Google Pixel (411px - 731px)*/
+@media screen and (min-width: 376px) and (max-width: 411px) {
+    .ford-logo {
+        width: 19%;
+        margin-left: 5px;
+    }
+ 
+    .mustang-logo {
+        width: 19%;
+    }
+ 
+    .navbar-icon {
+        margin-right: 7%;
+    }
+ 
+    .about-ford {  /*about ford*/
+        width: 87%;
+        margin-bottom: 25px;
+    }
+ 
+    .about-ford h2 {
+        font-size: 20px;
+    }
+ 
+    .about-ford p {
+        font-size: 12px;
+    }
+ 
+    .competitors-overview {  /*Competitors overview*/
+        width: 87%;
+        margin-bottom: 40px;
+    }
+ 
+    .competitors-overview h2 { 
+        font-size: 20px;
+    }
+ 
+    .overview-one {
+        font-size: 12px;
+    }
+ 
+    .overview-two {
+        font-size: 12px;
+    }
+ 
+    .mustang-display {
+        margin-bottom: 70px;
+    }
+ 
+    .slideshow-container-vintage {  /*1967 models*/
+        margin-bottom: 25px;
+    }
+ 
+    .vintage h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .vintage p {
+        font-size: 20px;
+    }
+ 
+    .vintage img {
+        width: 57%;
+    }
+ 
+    .prev-vintage {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-vintage {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .slideshow-container-new {  /*2014 models*/
+        margin-bottom: 25px;
+    }
+ 
+    .new h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .new p {
+        font-size: 20px;
+    }
+ 
+    .new img {
+        width: 57%;
+    }
+ 
+    .slideshow-container-modern {  /*2022 models*/
+        margin-bottom: 25px;
+    }  
+ 
+    .modern h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .modern p {
+        font-size: 20px;
+    }
+ 
+    .modern img {
+        width: 57%;
+    }
+ 
+    .prev-modern {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-modern {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .slideshow-container-future {  /*2024 models*/
+        margin-bottom: 25px;
+    }  
+ 
+    .future h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .future p {
+        font-size: 20px;
+    }
+ 
+    .future img {
+        width: 57%;
+    }
+ 
+    .prev-future {
+        top: 82%;
+        margin-left: 5%;
+    }
+ 
+    .next-future {
+        top: 82%;
+        margin-right: 5%;
+    }
+ 
+    .owner {  /*Founder section*/
+        width: 87%;
+    }
+ 
+    .owner h2 {
+        font-size: 20px;
+    }
+ 
+    .owner p {
+        font-size: 12px;
+    }
+ 
+    .founder-image img {
+        width: 70%;
+    }
+}
+ 
+/*iPad (768px - 1024px)*/
+@media screen and (min-width: 412px) and (max-width: 768px) {
+    .ford-logo {
+        width: 15%;
+        margin-left: 0px;
+    }
+ 
+    .mustang-logo {
+        width: 15%;
+    }
+ 
+    .navbar-icon {
+        margin-right: 7%;
+    }
+ 
+    .about-ford {  /*about ford*/
+        width: 87%;
+        margin-bottom: 25px;
+    }
+ 
+    .about-ford h2 {
+        font-size: 30px;
+    }
+ 
+    .about-ford p {
+        font-size: 15px;
+    }
+ 
+    .competitors-overview {  /*Competitors overview*/
+        width: 87%;
+        margin-bottom: 40px;
+    }
+ 
+    .competitors-overview h2 { 
+        font-size: 30px;
+    }
+ 
+    .overview-one {
+        font-size: 15px;
+    }
+ 
+    .overview-two {
+        font-size: 15px;
+    }
+ 
+    .mustang-display {
+        margin-bottom: 70px;
+    }
+ 
+    .slideshow-container-vintage {  /*1967 models*/
+        margin-bottom: 25px;
+    }
+ 
+    .vintage h2 {
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+ 
+    .vintage p {
+        font-size: 30px;
+    }
+ 
+    .vintage img {
+        width: 57%;
+    }
+ 
+    .prev-vintage {
+        top: 74%;
+        margin-left: 13%;
+    }
+ 
+    .next-vintage {
+        top: 74%;
+        margin-right: 13%;
+    }
+ 
+    .slideshow-container-new {  /*2014 models*/
+        margin-bottom: 25px;
+    }
+ 
+    .new h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .new p {
+        font-size: 20px;
+    }
+ 
+    .new img {
+        width: 57%;
+    }
+ 
+    .slideshow-container-modern {  /*2022 models*/
+        margin-bottom: 25px;
+    }  
+ 
+    .modern h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+ 
+    .modern p {
+        font-size: 30px;
+    }
+ 
+    .modern img {
+        width: 57%;
+    }
+ 
+    .prev-modern {
+        top: 74%;
+        margin-left: 13%;
+    }
+ 
+    .next-modern {
+        top: 74%;
+        margin-right: 13%;
+    }
+ 
+    .slideshow-container-future {  /*2024 models*/
+        margin-bottom: 25px;
+    }  
+ 
+    .future h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+ 
+    .future p {
+        font-size: 30px;
+    }
+ 
+    .future img {
+        width: 57%;
+    }
+ 
+    .prev-future {
+        top: 74%;
+        margin-left: 13%;
+    }
+ 
+    .next-future {
+        top: 74%;
+        margin-right: 13%;
+    }
+ 
+    .owner {  /*Founder section*/
+        width: 87%;
+    }
+ 
+    .owner h2 {
+        font-size: 30px;
+    }
+ 
+    .owner p {
+        font-size: 18px;
+    }
+ 
+    .founder-image img {
+        width: 70%;
+    }
+}
+ 
+/*MacBook People (1440px - 900px)*/
+@media screen and (min-width: 1440px) {
+    .ford-logo {
+        width: 10%;
+        margin-left: 0px;
+    }
+ 
+    .mustang-logo {
+        width: 10%;
+    }
+ 
+    .navbar-icon {
+        margin-right: 7%;
+    }
+ 
+    .image-container img {
+        top: 84px;
+    }
+ 
+    .about-ford {  /*about ford*/
+        width: 80%;
+        margin-bottom: 50px;
+    }
+ 
+    .about-ford h2 {
+        font-size: 40px;
+    }
+ 
+    .about-ford p {
+        font-size: 25px;
+    }
+ 
+    .competitors-overview {  /*Competitors overview*/
+        width: 80%;
+        margin-bottom: 100px;
+    }
+ 
+    .competitors-overview h2 { 
+        font-size: 40px;
+    }
+ 
+    .overview-one {
+        font-size: 25px;
+    }
+ 
+    .overview-two {
+        font-size: 25px;
+    }
+ 
+    .mustang-display {
+        margin-bottom: 70px;
+    }
+ 
+    .slideshow-container-vintage {  /*1967 models*/
+        margin-bottom: 100px;
+    }
+ 
+    .vintage h2 {
+        font-size: 45px;
+        margin-bottom: 18px;
+    }
+ 
+    .vintage p {
+        font-size: 45px;
+    }
+ 
+    .vintage img {
+        width: 57%;
+    }
+ 
+    .prev-vintage {
+        top: 69%;
+        margin-left: 15%;
+        font-size: 45px;
+    }
+ 
+    .next-vintage {
+        top: 69%;
+        margin-right: 15%;
+        font-size: 45px;
+    }
+ 
+    .slideshow-container-new {  /*2014 models*/
+        margin-bottom: 100px;
+    }
+ 
+    .new h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+ 
+    .new p {
+        font-size: 20px;
+    }
+ 
+    .new img {
+        width: 57%;
+    }
+ 
+    .slideshow-container-modern {  /*2022 models*/
+        margin-bottom: 100px;
+    }  
+ 
+    .modern h2 {
+        font-size: 45px;
+        margin-bottom: 18px;
+    }
+ 
+    .modern p {
+        font-size: 45px;
+    }
+ 
+    .modern img {
+        width: 57%;
+    }
+ 
+    .prev-modern {
+        top: 69%;
+        margin-left: 15%;
+        font-size: 45px;
+    }
+ 
+    .next-modern {
+        top: 69%;
+        margin-right: 15%;
+        font-size: 45px;
+    }
+ 
+    .slideshow-container-future {  /*2024 models*/
+        margin-bottom: 100px;
+    }  
+ 
+    .future h2 {
+        font-size: 45px;
+        margin-bottom: 18px;
+    }
+ 
+    .future p {
+        font-size: 45px;
+    }
+ 
+    .future img {
+        width: 57%;
+    }
+ 
+    .prev-future {
+        top: 69%;
+        margin-left: 15%;
+        font-size: 45px;
+    }
+ 
+    .next-future {
+        top: 69%;
+        margin-right: 15%;
+        font-size: 45px;
+    }
+ 
+    .owner {  /*Founder section*/
+        width: 80%;
+    }
+ 
+    .owner h2 {
+        font-size: 45px;
+    }
+ 
+    .owner p {
+        font-size: 25px;
+    }
+ 
+    .founder-image img {
+        width: 70%;
+    }
+}
